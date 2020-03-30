@@ -43,7 +43,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets: 
     #Images
-    - asset/image/lion2.png
+    - asset/image/lion.png
     - asset/image/goldfish.png
     - asset/image/giraffe.png
     - asset/image/zebra.png
@@ -71,6 +71,70 @@ flutter:
     - asset/image/snake.png
     - asset/image/snails.png
     - asset/image/sloth.png
+    - asset/image/hedgehog.png
+    - asset/image/hippo.png
+    - asset/image/horse.png
+    - asset/image/hyena.png
+    - asset/image/koala.png
+    - asset/image/jackal.png
+    - asset/image/jaguar.png
+    - asset/image/jellyfish.png
+    - asset/image/kangaroo.png
+    - asset/image/killer_whale.png
+    - asset/image/leopard.png
+    - asset/image/lizard.png
+    - asset/image/lobster.png
+    - asset/image/lynx.png
+    - asset/image/monkey.png
+    - asset/image/ostrich.png 
+    #New 
+    - asset/image/moose.png 
+    - asset/image/octopus.png 
+    - asset/image/orangutan.png 
+    - asset/image/owl.png 
+    - asset/image/panda.png 
+    - asset/image/parrot.png 
+    - asset/image/peacock.png 
+    - asset/image/pelican.png 
+    - asset/image/pigeon.png 
+    - asset/image/pinguin.png 
+    - asset/image/polar_bear.png 
+    - asset/image/raccoon.png 
+    - asset/image/rat_mouse.png 
+    - asset/image/raven.png 
+    - asset/image/rhino.png  
+    - asset/image/shark.png 
+    - asset/image/sheep.png 
+    - asset/image/shrimps.png 
+    #new 2
+    - asset/image/dolphin.png 
+    - asset/image/donkey.png 
+    - asset/image/duck.png 
+    - asset/image/elephants.png 
+    - asset/image/falcon.png 
+    - asset/image/feather.png 
+    - asset/image/ferret.png 
+    - asset/image/flamingo.png 
+    - asset/image/frog.png 
+    #New 3
+    - asset/image/Anaconda.png 
+    - asset/image/Arctic.png 
+    - asset/image/Bat.png 
+    - asset/image/Bear.png 
+    - asset/image/Beaver.png  
+    - asset/image/Bison.png 
+    - asset/image/boar.png 
+    - asset/image/camel.png 
+    - asset/image/cat.png 
+    - asset/image/Cheetah.png 
+    - asset/image/crab.png 
+    - asset/image/crocodile.png  
+    - asset/image/deer.png 
+    - asset/image/dog.png 
+    - asset/image/eagle.png  
+
+
+
     #json File
     - asset/json/image.json
   #  - images/a_dot_ham.jpeg

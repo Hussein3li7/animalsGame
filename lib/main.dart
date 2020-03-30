@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
   ];
 
-  String image = "asset/image/lion2.png";
+  String image = "asset/image/lion.png";
 
   int index = 0;
   int index2 = 0;
