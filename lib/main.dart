@@ -1,9 +1,15 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:animals/admobService/admobService.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+
+  AdmobService().getAppId();
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -97,6 +103,24 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     getImageJsonLength();
+    showBanaerAds();
+  }
+
+  BannerAd bannerAd;
+
+  void showBanaerAds() {
+    bannerAd = AdmobService().myBanner;
+    bannerAd
+      ..load()
+      ..show();
+  }
+
+  InterstitialAd interstitialAd;
+  void showInteAds() {
+    interstitialAd = AdmobService().myInterstitial;
+    interstitialAd
+      ..load()
+      ..show();
   }
 
   Widget imageForm1(BuildContext context, var data) {
@@ -106,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
         InkWell(
           onTap: () {
             if (data[index]['image'] == image) {
+              showInteAds();
               setState(() {
                 rightAnswer = true;
               });
