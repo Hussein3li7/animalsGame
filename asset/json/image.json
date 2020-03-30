@@ -1,0 +1,116 @@
+[
+ 
+    {
+        "name":"اسد",
+        "image":"asset/image/lion2.png"
+    } ,
+    {
+        "name":"حمار وحشي",
+        "image":"asset/image/zebra.png"
+    } ,
+
+    {
+        "name":"السمكة الذهبية",
+        "image":"asset/image/goldfish.png"
+    }  ,
+    {
+        "name":"زرافة",
+        "image":"asset/image/giraffe.png"
+    }  ,
+    {
+        "name":"حمار وحشي",
+        "image":"asset/image/zebra.png"
+    }  ,
+    {
+        "name":"نورس",
+        "image":"asset/image/gull.png"
+    }  ,
+    {
+        "name":"بجعة",
+        "image":"asset/image/goose.png"
+    }  ,
+    {
+        "name":"الطائر الطنان",
+        "image":"asset/image/hummingbird.png"
+    }  ,
+    {
+        "name":"سمكة",
+        "image":"asset/image/fish.png"
+    }  ,
+    {
+        "name":"الظربان",
+        "image":"asset/image/skunk.png"
+    }  ,
+    {
+        "name":"نجم البحر",
+        "image":"asset/image/starfish.png"
+    }  ,
+    {
+        "name":"سنجاب",
+        "image":"asset/image/squirrel.png"
+    }  ,
+    {
+        "name":"حبار",
+        "image":"asset/image/squid.png"
+    }  ,
+    {
+        "name":"عصفور",
+        "image":"asset/image/sparrow.png"
+    }  ,
+    {
+        "name":"نمر",
+        "image":"asset/image/tiger.png"
+    }  ,
+    {
+        "name":"طائر اللقلق",
+        "image":"asset/image/stork.png"
+    }  ,
+    {
+        "name":"حوت",
+        "image":"asset/image/whale.png"
+    }  ,
+    {
+        "name":"سلحفاة",
+        "image":"asset/image/turtle.png"
+    }  ,
+    {
+        "name":"ديك رومي",
+        "image":"asset/image/turkey.png"
+    }  ,
+    {
+        "name":"نقار الخشب",
+        "image":"asset/image/woodpecker.png"
+    }  ,
+    {
+        "name":"ذئب",
+        "image":"asset/image/wolf.png"
+    }  ,
+    {
+        "name":"حصان البحر",
+        "image":"asset/image/walrus.png"
+    }  ,
+    {
+        "name":"خنزير",
+        "image":"asset/image/pig.png"
+    }  ,
+    {
+        "name":"الديك",
+        "image":"asset/image/cock.png"
+    }  ,
+    {
+        "name":"الكوبرا",
+        "image":"asset/image/cobra.png"
+    }  ,
+    {
+        "name":"ثعبان",
+        "image":"asset/image/snake.png"
+    }  ,
+    {
+        "name":"حلزون القواقع ",
+        "image":"asset/image/snails.png"
+    }  ,
+    {
+        "name":"حيوان الكسلان ",
+        "image":"asset/image/sloth.png"
+    }  
+]
