@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:animals/admobService/admobService.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class HomePageApp extends StatefulWidget {
   @override
@@ -37,8 +38,11 @@ class _HomePageAppState extends State<HomePageApp> {
   bool showFrom2 = false;
 
   bool rightAnswer = false;
+  bool falseAnswer = false;
   int rightAnswerCount = 0;
-  int newRightAnswerCount = 0;
+  int wrongAnswerCount = 0;
+  int currentLevel = 0;
+  int nextLevel = 1;
 
   generateRandomBool() {
     var ranBool = new Random();
@@ -66,7 +70,7 @@ class _HomePageAppState extends State<HomePageApp> {
 
   var data2;
 
-  Future getImageJsonLength() async {
+  Future next() async {
     setState(() {
       rightAnswer = false;
     });
@@ -80,7 +84,7 @@ class _HomePageAppState extends State<HomePageApp> {
   @override
   void initState() {
     super.initState();
-    getImageJsonLength();
+    next();
     showBanaerAds();
   }
 
@@ -101,6 +105,88 @@ class _HomePageAppState extends State<HomePageApp> {
       ..show();
   }
 
+  void loseFunction() {
+    Alert(
+      context: context,
+      title: "خطأ",
+      desc: "الاختيار خطأ",
+      style: AlertStyle(
+          titleStyle: TextStyle(fontFamily: 'ballo'),
+          descStyle: TextStyle(fontFamily: 'ballo'),
+          alertBorder: Border(
+            bottom: BorderSide(
+              color: Colors.green,
+              width: 3.0,
+            ),
+          ),
+          animationDuration: Duration(seconds: 1),
+          animationType: AnimationType.grow,
+          isCloseButton: false),
+      image: Image(image: AssetImage('asset/image/sadCat.gif')),
+      buttons: [
+        DialogButton(
+          radius: BorderRadius.circular(20.0),
+          child: Text(
+            "المحاولة مرة ثانية",
+            style: TextStyle(
+                color: Colors.white, fontSize: 20, fontFamily: 'ballo'),
+          ),
+          onPressed: () => Navigator.pop(context),
+          color: Colors.red.shade700,
+        ),
+      ],
+    ).show();
+  }
+
+  void rightAnswerCall() {
+    Alert(
+      context: context,
+      style: AlertStyle(
+          titleStyle: TextStyle(fontFamily: 'ballo'),
+          alertBorder: Border(
+            bottom: BorderSide(
+              color: Colors.green,
+              width: 3.0,
+            ),
+          ),
+          animationDuration: Duration(seconds: 1),
+          animationType: AnimationType.grow,
+          isCloseButton: false,
+          overlayColor: Colors.black45,
+          isOverlayTapDismiss: false),
+      type: AlertType.success,
+      title: "الاجابة صحيحة",
+      buttons: [
+        DialogButton(
+          child: Text(
+            "التالي",
+            style: TextStyle(
+                color: Colors.white, fontSize: 20, fontFamily: 'ballo'),
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+            next();
+            setState(() {
+              nextLevel += 1;
+              currentLevel += 1;
+            });
+          },
+          color: Color.fromRGBO(0, 179, 134, 1.0),
+        ),
+      ],
+    ).show();
+  }
+
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+/////////////  End Functions  /////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+
   Widget imageForm1(BuildContext context, var data) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -109,20 +195,17 @@ class _HomePageAppState extends State<HomePageApp> {
           onTap: () {
             if (data[index]['image'] == image) {
               setState(() {
+                wrongAnswerCount = 0;
                 rightAnswer = true;
                 rightAnswerCount += 1;
               });
+              // Future.delayed(const Duration(seconds: 1), rightAnswerCall);
+              rightAnswerCall();
 
               if (rightAnswerCount == 3) {
                 showInteAds();
                 rightAnswerCount = 0;
               }
-
-              print(rightAnswerCount);
-              print(newRightAnswerCount);
-              print('Right');
-            } else {
-              print('Wrong');
             }
           },
           child: Container(
@@ -166,7 +249,14 @@ class _HomePageAppState extends State<HomePageApp> {
             if (data[index2]['image'] == image) {
               print('Right');
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -210,7 +300,14 @@ class _HomePageAppState extends State<HomePageApp> {
             if (data[index3]['image'] == image) {
               print('Right');
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -262,7 +359,14 @@ class _HomePageAppState extends State<HomePageApp> {
             if (data[index3]['image'] == image) {
               print('Right');
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -306,7 +410,14 @@ class _HomePageAppState extends State<HomePageApp> {
             if (data[index2]['image'] == image) {
               print('Right');
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -349,11 +460,25 @@ class _HomePageAppState extends State<HomePageApp> {
           onTap: () {
             if (data[index]['image'] == image) {
               setState(() {
+                wrongAnswerCount = 0;
                 rightAnswer = true;
+                rightAnswerCount += 1;
               });
-              print('Right');
+              // Future.delayed(const Duration(seconds: 1), rightAnswerCall);
+              rightAnswerCall();
+              if (rightAnswerCount == 3) {
+                showInteAds();
+                rightAnswerCount = 0;
+              }
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -405,7 +530,14 @@ class _HomePageAppState extends State<HomePageApp> {
             if (data[index3]['image'] == image) {
               print('Right');
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -448,11 +580,25 @@ class _HomePageAppState extends State<HomePageApp> {
           onTap: () {
             if (data[index]['image'] == image) {
               setState(() {
+                wrongAnswerCount = 0;
                 rightAnswer = true;
+                rightAnswerCount += 1;
               });
-              print('Right');
+              // Future.delayed(const Duration(seconds: 1), rightAnswerCall);
+              rightAnswerCall();
+              if (rightAnswerCount == 3) {
+                showInteAds();
+                rightAnswerCount = 0;
+              }
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -496,7 +642,14 @@ class _HomePageAppState extends State<HomePageApp> {
             if (data[index2]['image'] == image) {
               print('Right');
             } else {
-              print('Wrong');
+              setState(() {
+                rightAnswer = false;
+                wrongAnswerCount += 1;
+
+                if (wrongAnswerCount >= 2) {
+                  loseFunction();
+                }
+              });
             }
           },
           child: Container(
@@ -544,6 +697,7 @@ class _HomePageAppState extends State<HomePageApp> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        elevation: 0.0,
         title: Text(
           'الرئيسية',
           style: TextStyle(fontFamily: 'ballo'),
@@ -552,8 +706,45 @@ class _HomePageAppState extends State<HomePageApp> {
       body: Container(
         alignment: Alignment.center,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  alignment: Alignment.center,
+                  width: 50.0,
+                  height: 50.0,
+                  decoration: BoxDecoration(
+                      color: Colors.yellow.shade800,
+                      borderRadius: BorderRadius.circular(50.0)),
+                  child: Text(
+                    currentLevel.toString(),
+                    style: TextStyle(color: Colors.white, fontFamily: 'ballo'),
+                  ),
+                ),
+                Container(
+                  height: 5,
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade400,
+                      borderRadius: BorderRadius.circular(50.0)),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  width: 50.0,
+                  height: 50.0,
+                  decoration: BoxDecoration(
+                      color: Colors.green.shade800,
+                      borderRadius: BorderRadius.circular(50.0)),
+                  child: Text(
+                    nextLevel.toString(),
+                    style: TextStyle(color: Colors.white, fontFamily: 'ballo'),
+                  ),
+                ),
+              ],
+            ),
+
             Container(
               width: 300.0,
               height: 300.0,
@@ -565,10 +756,15 @@ class _HomePageAppState extends State<HomePageApp> {
                   ? Image.asset(
                       "$image",
                     )
-                  : Image.asset(
-                      "$image",
-                      color: Colors.green,
-                    ),
+                  : wrongAnswerCount == 1
+                      ? Image.asset(
+                          "$image",
+                          color: Colors.red.shade500,
+                        )
+                      : Image.asset(
+                          "$image",
+                          color: Colors.green,
+                        ),
             ),
             Container(
               child: FutureBuilder(
@@ -587,34 +783,34 @@ class _HomePageAppState extends State<HomePageApp> {
                     .loadString('asset/json/image.json'),
               ),
             ),
-            rightAnswer
-                ? Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      height: 60.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        gradient: LinearGradient(
-                            colors: [
-                              Color(0xff5879fb),
-                              Color(0xff841dde),
-                            ],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight),
-                      ),
-                      child: OutlineButton.icon(
-                          textColor: Colors.white,
-                          borderSide: BorderSide(color: Colors.transparent),
-                          label: Text(
-                            'التالي',
-                            style: TextStyle(fontFamily: 'ballo'),
-                          ),
-                          icon: Icon(Icons.arrow_back),
-                          onPressed: getImageJsonLength),
-                    ),
-                  )
-                : Offstage()
+            // rightAnswer
+            //     ? Directionality(
+            //         textDirection: TextDirection.rtl,
+            //         child: Container(
+            //           width: MediaQuery.of(context).size.width * 0.5,
+            //           height: 60.0,
+            //           decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10.0),
+            //             gradient: LinearGradient(
+            //                 colors: [
+            //                   Color(0xff5879fb),
+            //                   Color(0xff841dde),
+            //                 ],
+            //                 begin: Alignment.centerLeft,
+            //                 end: Alignment.centerRight),
+            //           ),
+            //           child: OutlineButton.icon(
+            //               textColor: Colors.white,
+            //               borderSide: BorderSide(color: Colors.transparent),
+            //               label: Text(
+            //                 'التالي',
+            //                 style: TextStyle(fontFamily: 'ballo'),
+            //               ),
+            //               icon: Icon(Icons.arrow_back),
+            //               onPressed: next),
+            //         ),
+            //       )
+            //     : Offstage()
           ],
         ),
       ),

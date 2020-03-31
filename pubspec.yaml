@@ -24,6 +24,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   firebase_admob: ^0.9.3+1
+  rflutter_alert: ^1.0.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -131,8 +132,9 @@ flutter:
     - asset/image/crocodile.png  
     - asset/image/deer.png 
     - asset/image/dog.png 
-    - asset/image/eagle.png  
-
+    - asset/image/eagle.png   
+    # Gif Image
+    - asset/image/sadCat.gif
 
 
     #json File
