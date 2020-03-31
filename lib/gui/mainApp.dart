@@ -37,6 +37,8 @@ class _HomePageAppState extends State<HomePageApp> {
   bool showFrom2 = false;
 
   bool rightAnswer = false;
+  int rightAnswerCount = 0;
+  int newRightAnswerCount = 0;
 
   generateRandomBool() {
     var ranBool = new Random();
@@ -106,10 +108,18 @@ class _HomePageAppState extends State<HomePageApp> {
         InkWell(
           onTap: () {
             if (data[index]['image'] == image) {
-              showInteAds();
               setState(() {
                 rightAnswer = true;
+                rightAnswerCount += 1;
               });
+
+              if (rightAnswerCount == 3) {
+                showInteAds();
+                rightAnswerCount = 0;
+              }
+
+              print(rightAnswerCount);
+              print(newRightAnswerCount);
               print('Right');
             } else {
               print('Wrong');

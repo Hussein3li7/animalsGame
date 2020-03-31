@@ -287,10 +287,7 @@
         "name":"الثعلب القطب الشمالي",
         "image":"asset/image/Arctic.png"
     }  ,  
-    {
-        "name":"بادجر",
-        "image":"asset/image/Badger.png"
-    }  ,  
+
     {
         "name":"خفاش",
         "image":"asset/image/Bat.png"
