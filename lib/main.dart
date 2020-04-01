@@ -1,11 +1,10 @@
-import 'package:animals/admobService/admobService.dart';
+import 'package:animals/Service/admobService.dart';
 import 'package:flutter/material.dart';
 
 import 'gui/mainApp.dart';
 
 void main() {
   runApp(MyApp());
-
   AdmobService().getAppId();
 }
 

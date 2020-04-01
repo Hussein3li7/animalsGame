@@ -1,355 +1,427 @@
 [
- 
-    {
-        "name":"اسد",
-        "image":"asset/image/lion.png"
-    } ,
-    {
-        "name":"حمار وحشي",
-        "image":"asset/image/zebra.png"
-    } ,
-
-    {
-        "name":"السمكة الذهبية",
-        "image":"asset/image/goldfish.png"
-    }  ,
-    {
-        "name":"زرافة",
-        "image":"asset/image/giraffe.png"
-    }  ,
-    {
-        "name":"حمار وحشي",
-        "image":"asset/image/zebra.png"
-    }  ,
-    {
-        "name":"نورس",
-        "image":"asset/image/gull.png"
-    }  ,
-    {
-        "name":"بجعة",
-        "image":"asset/image/goose.png"
-    }  ,
-    {
-        "name":"الطائر الطنان",
-        "image":"asset/image/hummingbird.png"
-    }  ,
-    {
-        "name":"سمكة",
-        "image":"asset/image/fish.png"
-    }  ,
-    {
-        "name":"الظربان",
-        "image":"asset/image/skunk.png"
-    }  ,
-    {
-        "name":"نجم البحر",
-        "image":"asset/image/starfish.png"
-    }  ,
-    {
-        "name":"سنجاب",
-        "image":"asset/image/squirrel.png"
-    }  ,
-    {
-        "name":"حبار",
-        "image":"asset/image/squid.png"
-    }  ,
-    {
-        "name":"عصفور",
-        "image":"asset/image/sparrow.png"
-    }  ,
-    {
-        "name":"نمر",
-        "image":"asset/image/tiger.png"
-    }  ,
-    {
-        "name":"طائر اللقلق",
-        "image":"asset/image/stork.png"
-    }  ,
-    {
-        "name":"حوت",
-        "image":"asset/image/whale.png"
-    }  ,
-    {
-        "name":"سلحفاة",
-        "image":"asset/image/turtle.png"
-    }  ,
-    {
-        "name":"ديك رومي",
-        "image":"asset/image/turkey.png"
-    }  ,
-    {
-        "name":"نقار الخشب",
-        "image":"asset/image/woodpecker.png"
-    }  ,
-    {
-        "name":"ذئب",
-        "image":"asset/image/wolf.png"
-    }  ,
-    {
-        "name":"حصان البحر",
-        "image":"asset/image/walrus.png"
-    }  ,
-    {
-        "name":"خنزير",
-        "image":"asset/image/pig.png"
-    }  ,
-    {
-        "name":"الديك",
-        "image":"asset/image/cock.png"
-    }  ,
-    {
-        "name":"الكوبرا",
-        "image":"asset/image/cobra.png"
-    }  ,
-    {
-        "name":"ثعبان",
-        "image":"asset/image/snake.png"
-    }  ,
-    {
-        "name":"قنفذ",
-        "image":"asset/image/hedgehog.png"
-    }  ,
-    {
-        "name":"فرس النهر",
-        "image":"asset/image/hippo.png"
-    }  ,
-    {
-        "name":"حصان",
-        "image":"asset/image/horse.png"
-    }  ,
-    
-    {
-        "name":"ضبع",
-        "image":"asset/image/hyena.png"
-    }  ,
-    {
-        "name":"ابن آوى",
-        "image":"asset/image/jackal.png"
-    }  ,
-    {
-        "name":"جاكوار",
-        "image":"asset/image/jaguar.png"
-    }  ,
-    {
-        "name":"قناديل البحر",
-        "image":"asset/image/jellyfish.png"
-    }  ,
-    {
-        "name":"كنغر",
-        "image":"asset/image/kangaroo.png"
-    }  ,
-    {
-        "name":"كوالا",
-        "image":"asset/image/koala.png"
-    }  ,
-    {
-        "name":"فهد",
-        "image":"asset/image/leopard.png"
-    }  ,
-    {
-        "name":"سحلية",
-        "image":"asset/image/lizard.png"
-    }  ,
-    {
-        "name":"سرطان البحر",
-        "image":"asset/image/lobster.png"
-    }  ,
-    {
-        "name":"حيوان الوشق",
-        "image":"asset/image/lynx.png"
-    }  ,
-    {
-        "name":"قرد",
-        "image":"asset/image/monkey.png"
-    }  ,
-    {
-        "name":"نعامة",
-        "image":"asset/image/ostrich.png"
-    }  ,  
-
-
-
-    {
-        "name":"غزال أمريكي ضخم",
-        "image":"asset/image/moose.png"
-    }  ,  
-    {
-        "name":"أخطبوط",
-        "image":"asset/image/octopus.png"
-    }  ,  
-    {
-        "name":"انسان الغابة",
-        "image":"asset/image/orangutan.png"
-    }  ,  
-    {
-        "name":"بومة",
-        "image":"asset/image/owl.png"
-    }  ,  
-    {
-        "name":"الباندا",
-        "image":"asset/image/panda.png"
-    }  ,  
-    {
-        "name":"ببغاء",
-        "image":"asset/image/parrot.png"
-    }  ,  
-    {
-        "name":"الطاووس",
-        "image":"asset/image/peacock.png"
-    }  ,  
-    {
-        "name":"البجع",
-        "image":"asset/image/pelican.png"
-    }  ,  
-    {
-        "name":"حمامة",
-        "image":"asset/image/pigeon.png"
-    }  ,  
-    {
-        "name":"بطريق",
-        "image":"asset/image/pinguin.png"
-    }  ,  
-    {
-        "name":"الدب القطبي",
-        "image":"asset/image/polar_bear.png"
-    }  ,  
-    {
-        "name":"الراكون",
-        "image":"asset/image/raccoon.png"
-    }  ,  
-    {
-        "name":"الفئران",
-        "image":"asset/image/rat_mouse.png"
-    }  ,  
-    {
-        "name":"غراب أسود",
-        "image":"asset/image/raven.png"
-    }  ,  
-    {
-        "name":"وحيد القرن",
-        "image":"asset/image/rhino.png"
-    }  ,  
-    {
-        "name":"قرش",
-        "image":"asset/image/shark.png"
-    }  ,  
-    {
-        "name":"خروف",
-        "image":"asset/image/sheep.png"
-    }  ,  
-    {
-        "name":"قريدس",
-        "image":"asset/image/shrimps.png"
-    }  ,  
-
-    
-    {
-        "name":"دولفين",
-        "image":"asset/image/dolphin.png"
-    }  ,  
-    {
-        "name":"حمار",
-        "image":"asset/image/donkey.png"
-    }  ,  
-    {
-        "name":"بطة",
-        "image":"asset/image/duck.png"
-    }  ,  
-    {
-        "name":"الفيل",
-        "image":"asset/image/elephants.png"
-    }  ,  
-    {
-        "name":"الصقر",
-        "image":"asset/image/falcon.png"
-    }  ,  
-    {
-        "name":"ريشة",
-        "image":"asset/image/feather.png"
-    }  ,  
-    {
-        "name":"النمس",
-        "image":"asset/image/ferret.png"
-    }  ,  
-    {
-        "name":"فلامنغو",
-        "image":"asset/image/flamingo.png"
-    }  ,  
-    {
-        "name":"ضفدع",
-        "image":"asset/image/frog.png"
-    }  ,   
-    {
-        "name":"اناكوندا",
-        "image":"asset/image/Anaconda.png"
-    }  ,  
-    {
-        "name":"الثعلب القطب الشمالي",
-        "image":"asset/image/Arctic.png"
-    }  ,  
-
-    {
-        "name":"خفاش",
-        "image":"asset/image/Bat.png"
-    }  ,  
-    {
-        "name":"دب",
-        "image":"asset/image/Bear.png"
-    }  ,  
-    {
-        "name":"سمور",
-        "image":"asset/image/Beaver.png"
-    }  ,  
-    {
-        "name":"الثور",
-        "image":"asset/image/Bison.png"
-    }  ,  
-    {
-        "name":"خنزير ذكر",
-        "image":"asset/image/boar.png"
-    }  ,  
-    {
-        "name":"جمل",
-        "image":"asset/image/camel.png"
-    }  ,  
-    {
-        "name":"قط",
-        "image":"asset/image/cat.png"
-    }  ,  
-    {
-        "name":"الفهد",
-        "image":"asset/image/Cheetah.png"
-    }  ,  
-    {
-        "name":"سلطعون",
-        "image":"asset/image/crab.png"
-    }  ,  
-    {
-        "name":"تمساح",
-        "image":"asset/image/crocodile.png"
-    }  ,  
-    {
-        "name":"الغزال",
-        "image":"asset/image/deer.png"
-    }  ,  
-    {
-        "name":"الكلب",
-        "image":"asset/image/dog.png"
-    }  ,  
-    {
-        "name":"نسر",
-        "image":"asset/image/eagle.png"
-    }  ,   
-    {
-        "name":"الحوت القاتل",
-        "image":"asset/image/killer_whale.png"
-    }  ,
-    {
-        "name":"حلزون القواقع ",
-        "image":"asset/image/snails.png"
-    }  ,
-    {
-        "name":"حيوان الكسلان ",
-        "image":"asset/image/sloth.png"
-    }  
+    {
+        "name": "اسد",
+        "image": "asset/image/lion.png",
+        "enName": "lion"
+    },
+    {
+        "name": "حمار وحشي",
+        "image": "asset/image/zebra.png",
+        "enName": "zebra"
+    },
+    {
+        "name": "السمكة الذهبية",
+        "image": "asset/image/goldfish.png",
+        "enName": "goldfish"
+    },
+    {
+        "name": "زرافة",
+        "image": "asset/image/giraffe.png",
+        "enName": "giraffe"
+    },
+    {
+        "name": "نورس",
+        "image": "asset/image/gull.png",
+        "enName": "gull"
+    },
+    {
+        "name": "بجعة",
+        "image": "asset/image/goose.png",
+        "enName": "goose"
+    },
+    {
+        "name": "الطائر الطنان",
+        "image": "asset/image/hummingbird.png",
+        "enName": "hummingbird "
+    },
+    {
+        "name": "سمكة",
+        "image": "asset/image/fish.png",
+        "enName": "fish"
+    },
+    {
+        "name": "الظربان",
+        "image": "asset/image/skunk.png",
+        "enName": "skunk"
+    },
+    {
+        "name": "نجم البحر",
+        "image": "asset/image/starfish.png",
+        "enName": "starfish"
+    },
+    {
+        "name": "سنجاب",
+        "image": "asset/image/squirrel.png",
+        "enName": "squirrel"
+    },
+    {
+        "name": "حبار",
+        "image": "asset/image/squid.png",
+        "enName": "squid"
+    },
+    {
+        "name": "عصفور",
+        "image": "asset/image/sparrow.png",
+        "enName": "sparrow"
+    },
+    {
+        "name": "نمر",
+        "image": "asset/image/tiger.png",
+        "enName": "tiger"
+    },
+    {
+        "name": "طائر اللقلق",
+        "image": "asset/image/stork.png",
+        "enName": "stork"
+    },
+    {
+        "name": "حوت",
+        "image": "asset/image/whale.png",
+        "enName": "whale"
+    },
+    {
+        "name": "سلحفاة",
+        "image": "asset/image/turtle.png",
+        "enName": "turtle"
+    },
+    {
+        "name": "ديك رومي",
+        "image": "asset/image/turkey.png",
+        "enName": "turkey"
+    },
+    {
+        "name": "نقار الخشب",
+        "image": "asset/image/woodpecker.png",
+        "enName": "woodpecker"
+    },
+    {
+        "name": "ذئب",
+        "image": "asset/image/wolf.png",
+        "enName": "wolf"
+    },
+    {
+        "name": "حصان البحر",
+        "image": "asset/image/walrus.png",
+        "enName": "walrus"
+    },
+    {
+        "name": "خنزير",
+        "image": "asset/image/pig.png",
+        "enName": "pig"
+    },
+    {
+        "name": "الديك",
+        "image": "asset/image/cock.png",
+        "enName": "cock"
+    },
+    {
+        "name": "الكوبرا",
+        "image": "asset/image/cobra.png",
+        "enName": "cobra"
+    },
+    {
+        "name": "ثعبان",
+        "image": "asset/image/snake.png",
+        "enName": "snake"
+    },
+    {
+        "name": "قنفذ",
+        "image": "asset/image/hedgehog.png",
+        "enName": "hedgehog"
+    },
+    {
+        "name": "فرس النهر",
+        "image": "asset/image/hippo.png",
+        "enName": "hippo"
+    },
+    {
+        "name": "حصان",
+        "image": "asset/image/horse.png",
+        "enName": "horse"
+    },
+    {
+        "name": "ضبع",
+        "image": "asset/image/hyena.png",
+        "enName": "hyena"
+    },
+    {
+        "name": "ابن آوى",
+        "image": "asset/image/jackal.png",
+        "enName": "jackal"
+    },
+    {
+        "name": "جاكوار",
+        "image": "asset/image/jaguar.png",
+        "enName": "jaguar"
+    },
+    {
+        "name": "قناديل البحر",
+        "image": "asset/image/jellyfish.png",
+        "enName": "jellyfish"
+    },
+    {
+        "name": "كنغر",
+        "image": "asset/image/kangaroo.png",
+        "enName": "kangaroo"
+    },
+    {
+        "name": "كوالا",
+        "image": "asset/image/koala.png",
+        "enName": "koala"
+    },
+    {
+        "name": "فهد",
+        "image": "asset/image/leopard.png",
+        "enName": "leopard"
+    },
+    {
+        "name": "سحلية",
+        "image": "asset/image/lizard.png",
+        "enName": "lizard"
+    },
+    {
+        "name": "سرطان البحر",
+        "image": "asset/image/lobster.png",
+        "enName": "lobster"
+    },
+    {
+        "name": "حيوان الوشق",
+        "image": "asset/image/lynx.png",
+        "enName": "lynx"
+    },
+    {
+        "name": "قرد",
+        "image": "asset/image/monkey.png",
+        "enName": "monkey"
+    },
+    {
+        "name": "نعامة",
+        "image": "asset/image/ostrich.png",
+        "enName": "ostrich"
+    },
+    {
+        "name": "غزال أمريكي ضخم",
+        "image": "asset/image/moose.png",
+        "enName": "moose"
+    },
+    {
+        "name": "أخطبوط",
+        "image": "asset/image/octopus.png",
+        "enName": "octopus"
+    },
+    {
+        "name": "انسان الغابة",
+        "image": "asset/image/orangutan.png",
+        "enName": "orangutan"
+    },
+    {
+        "name": "بومة",
+        "image": "asset/image/owl.png",
+        "enName": "owl"
+    },
+    {
+        "name": "الباندا",
+        "image": "asset/image/panda.png",
+        "enName": "panda"
+    },
+    {
+        "name": "ببغاء",
+        "image": "asset/image/parrot.png",
+        "enName": "parrot"
+    },
+    {
+        "name": "الطاووس",
+        "image": "asset/image/peacock.png",
+        "enName": "peacock"
+    },
+    {
+        "name": "البجع",
+        "image": "asset/image/pelican.png",
+        "enName": "pelican"
+    },
+    {
+        "name": "حمامة",
+        "image": "asset/image/pigeon.png",
+        "enName": "pigeon"
+    },
+    {
+        "name": "بطريق",
+        "image": "asset/image/pinguin.png",
+        "enName": "pinguin"
+    },
+    {
+        "name": "الدب القطبي",
+        "image": "asset/image/polar_bear.png",
+        "enName": "polar bear"
+    },
+    {
+        "name": "الراكون",
+        "image": "asset/image/raccoon.png",
+        "enName": "raccoon"
+    },
+    {
+        "name": "الفئران",
+        "image": "asset/image/rat_mouse.png",
+        "enName": " mouse"
+    },
+    {
+        "name": "غراب أسود",
+        "image": "asset/image/raven.png",
+        "enName": "raven"
+    },
+    {
+        "name": "وحيد القرن",
+        "image": "asset/image/rhino.png",
+        "enName": "rhino"
+    },
+    {
+        "name": "قرش",
+        "image": "asset/image/shark.png",
+        "enName": "shark"
+    },
+    {
+        "name": "خروف",
+        "image": "asset/image/sheep.png",
+        "enName": "sheep"
+    },
+    {
+        "name": "قريدس",
+        "image": "asset/image/shrimps.png",
+        "enName": "shrimps"
+    },
+    {
+        "name": "دولفين",
+        "image": "asset/image/dolphin.png",
+        "enName": "dolphin"
+    },
+    {
+        "name": "حمار",
+        "image": "asset/image/donkey.png",
+        "enName": "donkey"
+    },
+    {
+        "name": "بطة",
+        "image": "asset/image/duck.png",
+        "enName": "duck"
+    },
+    {
+        "name": "الفيل",
+        "image": "asset/image/elephants.png",
+        "enName": "elephants"
+    },
+    {
+        "name": "الصقر",
+        "image": "asset/image/falcon.png",
+        "enName": "falcon"
+    },
+    {
+        "name": "ريشة",
+        "image": "asset/image/feather.png",
+        "enName": "feather"
+    },
+    {
+        "name": "النمس",
+        "image": "asset/image/ferret.png",
+        "enName": "ferret"
+    },
+    {
+        "name": "فلامنغو",
+        "image": "asset/image/flamingo.png",
+        "enName": "flamingo"
+    },
+    {
+        "name": "ضفدع",
+        "image": "asset/image/frog.png",
+        "enName": "frog"
+    },
+    {
+        "name": "اناكوندا",
+        "image": "asset/image/Anaconda.png",
+        "enName": "Anaconda"
+    },
+    {
+        "name": "الثعلب القطب الشمالي",
+        "image": "asset/image/Arctic.png",
+        "enName": "Arctic fox"
+    },
+    {
+        "name": "خفاش",
+        "image": "asset/image/Bat.png",
+        "enName": "a bat"
+    },
+    {
+        "name": "دب",
+        "image": "asset/image/Bear.png",
+        "enName": "Bear"
+    },
+    {
+        "name": "سمور",
+        "image": "asset/image/Beaver.png",
+        "enName": "Beaver"
+    },
+    {
+        "name": "الثور",
+        "image": "asset/image/Bison.png",
+        "enName": "Bison"
+    },
+    {
+        "name": "خنزير ذكر",
+        "image": "asset/image/boar.png",
+        "enName": "boar"
+    },
+    {
+        "name": "جمل",
+        "image": "asset/image/camel.png",
+        "enName": "camel"
+    },
+    {
+        "name": "قط",
+        "image": "asset/image/cat.png",
+        "enName": "cat"
+    },
+    {
+        "name": "الفهد",
+        "image": "asset/image/Cheetah.png",
+        "enName": "Cheetah"
+    },
+    {
+        "name": "سلطعون",
+        "image": "asset/image/crab.png",
+        "enName": "crab"
+    },
+    {
+        "name": "تمساح",
+        "image": "asset/image/crocodile.png",
+        "enName": "crocodile"
+    },
+    {
+        "name": "الغزال",
+        "image": "asset/image/deer.png",
+        "enName": "deer"
+    },
+    {
+        "name": "الكلب",
+        "image": "asset/image/dog.png",
+        "enName": "dog"
+    },
+    {
+        "name": "نسر",
+        "image": "asset/image/eagle.png",
+        "enName": "eagle"
+    },
+    {
+        "name": "الحوت القاتل",
+        "image": "asset/image/killer_whale.png",
+        "enName": "killer whale"
+    },
+    {
+        "name": "حلزون القواقع ",
+        "image": "asset/image/snails.png",
+        "enName": "snails"
+    },
+    {
+        "name": "حيوان الكسلان ",
+        "image": "asset/image/sloth.png",
+        "enName": "sloth"
+    }
 ]

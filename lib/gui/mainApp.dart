@@ -1,9 +1,13 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 
-import 'package:animals/admobService/admobService.dart';
+import 'package:animals/Service/admobService.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
+import 'ttsFlutter.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class HomePageApp extends StatefulWidget {
@@ -84,8 +88,21 @@ class _HomePageAppState extends State<HomePageApp> {
   @override
   void initState() {
     super.initState();
+    initTts();
     next();
     showBanaerAds();
+    readDataLevel();
+  }
+
+  readDataLevel() async {
+    var data = await readData();
+    if (!data.contains('No')) {
+      currentLevel = int.parse(data);
+      nextLevel = currentLevel + 1;
+    } else {
+      currentLevel = 0;
+      nextLevel = 1;
+    }
   }
 
   BannerAd bannerAd;
@@ -149,7 +166,6 @@ class _HomePageAppState extends State<HomePageApp> {
               width: 3.0,
             ),
           ),
-          animationDuration: Duration(seconds: 1),
           animationType: AnimationType.grow,
           isCloseButton: false,
           overlayColor: Colors.black45,
@@ -165,11 +181,13 @@ class _HomePageAppState extends State<HomePageApp> {
           ),
           onPressed: () {
             Navigator.pop(context);
+
             next();
             setState(() {
               nextLevel += 1;
               currentLevel += 1;
             });
+            writeData(nextLevel.toString());
           },
           color: Color.fromRGBO(0, 179, 134, 1.0),
         ),
@@ -199,8 +217,9 @@ class _HomePageAppState extends State<HomePageApp> {
                 rightAnswer = true;
                 rightAnswerCount += 1;
               });
-              // Future.delayed(const Duration(seconds: 1), rightAnswerCall);
-              rightAnswerCall();
+              _speak(data[index]['enName']);
+
+              Future.delayed(const Duration(seconds: 1), rightAnswerCall);
 
               if (rightAnswerCount == 3) {
                 showInteAds();
@@ -464,8 +483,9 @@ class _HomePageAppState extends State<HomePageApp> {
                 rightAnswer = true;
                 rightAnswerCount += 1;
               });
-              // Future.delayed(const Duration(seconds: 1), rightAnswerCall);
-              rightAnswerCall();
+              _speak(data[index]['enName']);
+              Future.delayed(const Duration(seconds: 1), rightAnswerCall);
+
               if (rightAnswerCount == 3) {
                 showInteAds();
                 rightAnswerCount = 0;
@@ -584,8 +604,9 @@ class _HomePageAppState extends State<HomePageApp> {
                 rightAnswer = true;
                 rightAnswerCount += 1;
               });
-              // Future.delayed(const Duration(seconds: 1), rightAnswerCall);
-              rightAnswerCall();
+              _speak(data[index]['enName']);
+              Future.delayed(const Duration(seconds: 1), rightAnswerCall);
+
               if (rightAnswerCount == 3) {
                 showInteAds();
                 rightAnswerCount = 0;
@@ -695,6 +716,7 @@ class _HomePageAppState extends State<HomePageApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0.0,
@@ -704,6 +726,14 @@ class _HomePageAppState extends State<HomePageApp> {
         ),
       ),
       body: Container(
+        margin: EdgeInsets.only(top: 20.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(500),
+            topRight: Radius.circular(500),
+          ),
+        ),
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -783,6 +813,7 @@ class _HomePageAppState extends State<HomePageApp> {
                     .loadString('asset/json/image.json'),
               ),
             ),
+
             // rightAnswer
             //     ? Directionality(
             //         textDirection: TextDirection.rtl,
@@ -815,5 +846,61 @@ class _HomePageAppState extends State<HomePageApp> {
         ),
       ),
     );
+  }
+
+  TtsState ttsState = TtsState.stopped;
+  FlutterTts flutterTts;
+  dynamic languages;
+  initTts() {
+    flutterTts = FlutterTts();
+    flutterTts.setLanguage('en-UA');
+  }
+
+  Future _speak(String _newVoiceText) async {
+    await flutterTts.setVolume(1);
+    await flutterTts.setSpeechRate(0.3);
+    await flutterTts.setPitch(1.2);
+
+    if (_newVoiceText != null) {
+      if (_newVoiceText.isNotEmpty) {
+        var result = await flutterTts.speak(_newVoiceText);
+        if (result == 1) setState(() => ttsState = TtsState.playing);
+      }
+    }
+  }
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+//////////////////// Read And Write Level Data ////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+
+  Future<String> get localPath async {
+    final path = await getApplicationDocumentsDirectory();
+    return path.path;
+  }
+
+  Future<File> get localFile async {
+    final file = await localPath;
+    return new File('$file/levelData.txt');
+  }
+
+  Future<File> writeData(String level) async {
+    final file = await localFile;
+    return file.writeAsString(level);
+  }
+
+  Future<String> readData() async {
+    try {
+      final file = await localFile;
+      String data = await file.readAsString();
+      return data;
+    } catch (e) {
+      print('No');
+      return e.toString();
+    }
   }
 }

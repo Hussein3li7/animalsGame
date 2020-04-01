@@ -25,6 +25,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_admob: ^0.9.3+1
   rflutter_alert: ^1.0.3
+  flutter_tts: ^0.9.1
+  path_provider: ^1.6.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
